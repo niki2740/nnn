@@ -1,0 +1,3 @@
+[submodule "git1"]
+	path = git1
+	url = git@github.com:niki2740/git1.git
