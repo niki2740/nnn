@@ -27,8 +27,8 @@ jobs:
         pip install -r requirements.txt 
     - name: Install doxygen
       run: |
-        sudo apt update
-        sudo apt install doxygen
+        sudo apt-get update
+        sudo apt-get install doxygen -y  #  -y  добавлено для автоматического подтверждения 
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
@@ -47,4 +47,4 @@ jobs:
         deploy_key: ${{ secrets.DEPLOY_KEY }}
         publish_dir: ./docs/html
         publish_branch: gh-pages
-        force_orphan: true
+        force_orphan: true 
