@@ -35,11 +35,11 @@ jobs:
         pytest test.py
     - name: Build Documentation
       run: |
-        mkdocs build
+        doxygen Doxyfile
     - name: Deploy Documentation
       uses: peaceiris/actions-gh-pages@v3
       with:
         deploy_key: ${{ secrets.DEPLOY_KEY }}
-        publish_dir: ./site
+        publish_dir: ./docs/html
         publish_branch: gh-pages
-        force_orphan: true 
+        force_orphan: true
