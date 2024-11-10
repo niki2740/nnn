@@ -33,15 +33,13 @@ jobs:
     - name: Test with pytest
       run: |
         pytest test.py
-    - name: Build Docs
+    - name: Build Documentation
       run: |
-        sphinx-apidoc -o docs/ hello.py
-        make html -b html  # Используйте make html для HTML документации
-        # make latexpdf  # Используйте make latexpdf для PDF документации (если нужно)
+        mkdocs build
     - name: Deploy Documentation
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./docs/_build/html # Измените на нужную папку
-        publish_branch: gh-pages # Ветка для размещения документации
-
+        deploy_key: ${{ secrets.DEPLOY_KEY }}
+        publish_dir: ./site
+        publish_branch: gh-pages
+        force_orphan: true 
