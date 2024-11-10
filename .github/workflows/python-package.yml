@@ -35,7 +35,7 @@ jobs:
         pytest test.py
     - name: Build Docs
       run: |
-        sphinx-apidoc -o docs/ my_package
+        sphinx-apidoc -o docs/ .
         make html -b html  # Используйте make html для HTML документации
         # make latexpdf  # Используйте make latexpdf для PDF документации (если нужно)
     - name: Deploy Documentation
