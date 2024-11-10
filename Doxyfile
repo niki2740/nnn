@@ -4,8 +4,7 @@ INPUT                  = .
 GENERATE_LATEX          = NO
 GENERATE_HTML          = YES
 GENERATE_HTMLHELP      = NO
-GENERATE_CHM           = NO
-GENERATE_RTF           = NO
+
 GENERATE_XML           = NO
 GENERATE_DOCSET        = NO
 INPUT_ENCODING         = UTF-8
